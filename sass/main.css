@@ -1,22 +1,39 @@
-.container {
-  border: 2px solid rebeccapurple;
-}
-
 h1 {
-  color: red;
+  color: #fff;
+  border: 2px solid black;
 }
 
 .nav {
-  border: 2px solid red;
   height: 100%;
+  background: #F26559;
+}
+
+.heading {
+  background: #F26559;
+  border-radius: 12px;
+  border: 2px solid black;
+}
+
+.nav a {
+  float: right;
+  color: #fff;
 }
 
 .body {
-  border: 1px solid green;
   height: 75vh;
   width: auto;
   padding: 15px;
   margin: auto;
+  border-radius: 4px;
+  background: #F0EFF4;
+}
+
+.bodyCard {
+  background-color: #8CA9D3;
+}
+
+.btn {
+  color: #F26559;
 }
 
 .quizIcon img {
@@ -33,6 +50,11 @@ h1 {
 }
 
 .footer {
-  border: 2px solid yellow;
   height: 15vh;
+  background: #F26559;
+  border-radius: 2px;
+}
+
+.footer p {
+  color: blanchedalmond;
 }/*# sourceMappingURL=main.css.map */

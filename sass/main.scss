@@ -1,19 +1,50 @@
-.container{
- border: 2px solid rebeccapurple;
-}
+$myColor: #F26559;
+$fontColor: #fff;
+$bodyBg: #F0EFF4;
+$cardBg: #8CA9D3;
+
+// .container{
+//  border: 2px solid rebeccapurple;
+// }
+
 h1{
-     color:red;
+     color: $fontColor;
+     border: 2px solid black;
+
 }
 .nav{
-     border: 2px solid red;
      height: 100%;
+     background: $myColor;
+
+}
+.heading{
+     background: $myColor;
+     border-radius: 12px;
+     border: 2px solid black;
+
+}
+.nav a{
+     float: right;
+     color: $fontColor;
+
 }
 .body{
-     border: 1px solid green;
      height: 75vh;
      width: auto;
      padding: 15px;
      margin: auto;
+     border-radius: 4px;
+     background: $bodyBg;
+
+}
+.bodyCard{
+     background-color: $cardBg;
+}
+
+.btn{
+     // background: $myColor;
+     color: $myColor;
+     
 }
 
 .quizIcon img{
@@ -26,6 +57,14 @@ h1{
      align-self: center;
 }
 .footer{
-     border: 2px solid yellow;
      height: 15vh;
+     background: $myColor;
+     border-radius: 2px;
+
+      
+
+}
+$newColor: blanchedalmond;
+.footer p{
+     color: $newColor;
 }
