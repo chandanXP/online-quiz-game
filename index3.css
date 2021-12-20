@@ -3,18 +3,21 @@
 }
 
 h1 {
+  /* color: red; */
   color: #fff;
+
 }
 
 .nav {
-  height: 100%;
-  background: #F26559;
+  height: 9vh;
+  background: #f26559;
+  /* background: black; */
   padding: 8px;
   font-family: "Bangers", cursive;
 }
 
 .heading {
-  background: #F26559;
+  background: #f26559;
   border-radius: 2px;
   padding: 8px;
 }
@@ -31,25 +34,26 @@ h1 {
   padding: 15px;
   margin: auto;
   border-radius: 4px;
-  background: #F0EFF4;
+  background: #f0eff4;
 }
 
 .bodyCard {
-  background-color: #8CA9D3;
+  background-color: #8ca9d3;
   border-radius: 2px;
 }
 
 .bodyCard h5 {
-  color: #F26559;
+  color: #f26559;
 }
 
 .btn {
-  background: #F26559;
+  background: #f26559;
   color: #fff;
 }
 
-.btn :hover {
+.btn:hover {
   color: #fff;
+  color: #8ca9d3;
 }
 
 .quizIcon {
@@ -72,11 +76,18 @@ h1 {
 }
 
 .footer {
-  height: 17vh;
-  background: #F26559;
+  border: 2px solid aqua;
+  height: 20vh;
+  background: #f26559;
   border-radius: 2px;
   color: #fff;
   padding: 8px;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid greenyellow;
 }
 
 .footer p {
@@ -97,20 +108,14 @@ h1 {
 }
 
 .footer .follow {
-  display: inline;
-  font-size: 1.2rem;
-}
-
-.footer .footerContainer {
-  display: flex;
-  flex-direction: row;
+  font-size: 1.1rem;
 }
 
 .blankDiv {
   border: 2px solid #fff;
-  height: 7rem;
+  height: 6.5rem;
   width: 4px;
   border-radius: 4px;
   background: #fff;
   margin-right: 8px;
-}/*# sourceMappingURL=main.css.map */
+}

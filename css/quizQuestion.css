@@ -1,0 +1,28 @@
+.options{
+     list-style-type: none;
+     border: 2px solid yellow;
+     /* display: block; */
+
+}
+.quizOptions .btn{
+     width: 50%;
+     font-size: 1rem;
+     padding: 4px;
+}
+.quizQuestions{
+     border: 2px solid green;
+     height: 100%;
+}
+.quizQuit{
+     border: 2px solid grey;
+     width: auto;
+     position: relative;
+     margin-bottom: 0%;
+}
+
+.quizQuit .btn{
+     width: 8vw;
+}
+.questionNumber h2{
+     color:#f26559;
+}
