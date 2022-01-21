@@ -12,7 +12,7 @@
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="../../index3.css">
+     <link rel="stylesheet" href="../../index.css">
      <link rel="stylesheet" href="../../css/quizQuestion.css">
 
      <!-- <link rel="stylesheet" href="../../css/quiz.css"> -->

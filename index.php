@@ -1,4 +1,8 @@
-
+<?php 
+if(session_id()){
+     session_destroy();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,20 +17,20 @@
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="index3.css">
+     <link rel="stylesheet" href="index.css">
      <title>Online Quiz</title>
 </head>
 
 <body>
      <div class="container">
           <div class="nav heading mt-1">
-               <h1>Online Quiz</h1>
+               <h1>O n l i n e  Q u i z</h1>
                <a class="leaderBoard" href="./index.php" > Home </a>
-               <a class="leaderBoard" href="#">Leader Board</a>
+               <a class="leaderBoard" href="#">L e a d e r    B o a r d</a>
 
           </div>
           <div class="row row-cols-2 body">
-               <div class="card mx-3 mb-3 shadow p-1 mb-2 bg-body rounded " style="max-width: 500px;">
+               <div class="card shadow p-1 mx-3 mb-3 bg-body rounded " style="max-width: 500px;">
                     <div class="row g-0">
                          <div class="col-md-4 quizIcon">
                               <img src="https://i1.wp.com/www.elkovan.com.sg/wp-content/uploads/2019/02/Math-Square-Logo.png?ssl=1" alt="...">
@@ -36,13 +40,13 @@
                                    <h5 class="card-title">Maths Quiz</h5>
                                    <p class="card-text">In online math quiz we will practice various types of questions on math quizzes. Quiz provides numerous Questions to boost your knowledge.</p>
                                    <form method="post" action="./Components/mathsQuiz.php">
-                                        <button type="submit" class="btn"  >Start Quiz</button>
+                                        <button type="submit" class="btn" name = "mathsQuestions" value= "mathsQuestions"<?php setcookie("Subject", "Maths", time() + 2 * 24 * 60 * 60); ?>>Start Quiz</button>
                                    </form>
                               </div>
                          </div>
                     </div>
                </div>
-               <div class="card  mx-3 mb-3 shadow p-1 mb-2 bg-body rounded " style="max-width: 500px;">
+               <div class="card  mx-3 mb-3 shadow p-1  bg-body rounded " style="max-width: 500px;">
                     <div class="row g-0">
                          <div class="col-md-4 quizIcon">
                               <img src="https://th.bing.com/th/id/R664a26675976fc8fe694ad9892806b82?rik=B%2fxgH63jsVWycg&riu=http%3a%2f%2fmandoraschihouse.co.uk%2fwp-content%2fuploads%2f2015%2f11%2fknowledge_icon.png&ehk=ipGT0D7ldofIg7%2bCr0BVMXdPXYAYXYXKi237tTCSTLQ%3d&risl=&pid=ImgRaw" alt="...">
@@ -51,14 +55,14 @@
                               <div class="card-body mx-4">
                                    <h5 class="card-title">General Knowledge Quiz</h5>
                                    <p class="card-text">Test your General knowledge of 2021, Questions will be based on History, Geography, Science and Important events. Take this quiz to improve you knowledge..</p>
-                                   <form method="post" action="./Components/generalKnowledgeQuiz.php">
-                                        <button type="submit" class="btn">Start Quiz</button>
+                                   <form method="post" action="./Components/mathsQuiz.php">
+                                        <button type="submit" class="btn" name = "gkQuestions" value= "gkQuestions">Start Quiz</button>
                                    </form>
                               </div>
                          </div>
                     </div>
                </div>
-               <div class="card  mx-3 mb-3  shadow p-1 mb-2 bg-body rounded " style="max-width: 500px;">
+               <div class="card  mx-3 mb-3  shadow p-1 bg-body rounded " style="max-width: 500px;">
                     <div class="row g-0">
                          <div class="col-md-4 quizIcon">
                               <img src="https://th.bing.com/th/id/OIP.qhfHE80M3c1Le0myC6U0iQHaHa?pid=ImgDet&rs=1" alt="...">
@@ -67,24 +71,24 @@
                               <div class="card-body mx-4">
                                    <h5 class="card-title">Cricket Quiz</h5>
                                    <p class="card-text">Ultimate Cricket Quiz Questions, Put your skills to the test with this sports quiz! Apply some sunscreen to your face and try out this series of cricket questions!</p>
-                                   <form method="post" action="./Components/cricketQuiz.php">
-                                        <button type="submit" class="btn" id="quizBtn">Start Quiz</button>
+                                   <form method="post" action="./Components/mathsQuiz.php">
+                                        <button type="submit" class="btn" id="quizBtn" name = "cricketQuestions" value= "cricketQuestions">Start Quiz</button>
                                    </form>
                               </div>
                          </div>
                     </div>
                </div>
-               <div class="card mx-3 mb-3 shadow p-1 mb-2 bg-body rounded " style="max-width: 500px;">
+               <div class="card mx-3 mb-3 shadow p-1 2 bg-body rounded " style="max-width: 500px;">
                     <div class="row g-0">
                          <div class="col-md-4 quizIcon">
                               <img src="https://th.bing.com/th/id/R061169787c9201fa76fdc08c7304ed59?rik=F0BVzhd0V1y3pA&riu=http%3a%2f%2fwww.gc-animalwelfare.org%2fwp-content%2fthemes%2fgcaw%2fdist%2fimages%2flogo.png&ehk=3%2bx6zLPXIxJ0eC2cZ7aoCMs9gUM9D%2fPQlv7Lg7bUiHg%3d&risl=&pid=ImgRaw" alt="...">
                          </div>
                          <div class="col-md-8 bodyCard">
                               <div class="card-body mx-4">
-                                   <h5 class="card-title">Animals Quiz</h5>
+                                   <h5 class="card-title">Wild Life Quiz</h5>
                                    <p class="card-text">Guess that animal? We’ll be give you some hints as to what animal we’re thinking of and expect you to be able to tell us exactly what animal it is!</p>
-                                   <form method="post" action="./Components/animalQuiz.php">
-                                        <button type="submit" class="btn ">Start Quiz</button>
+                                   <form method="post" action="./Components/mathsQuiz.php">
+                                        <button type="submit" class="btn " name = "wildlifeQuestions" value= "wildlifeQuestions">Start Quiz</button>
                                    </form>
                               </div>
                          </div>

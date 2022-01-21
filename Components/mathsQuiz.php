@@ -12,7 +12,7 @@
      <link rel="preconnect" href="https://fonts.gstatic.com">
      <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="../index3.css">
+     <link rel="stylesheet" href="../index.css">
      <link rel="stylesheet" href="../css/quiz.css">
      <title>Maths Quiz</title>
 </head>
@@ -26,27 +26,51 @@
           </div>
           <div class="row row-cols-2 body">
                <div class="card mx-auto shadow p-1 bg-body rounded " style="max-width: 500px;">
-                    <div class="quizHead rounded m-1">
-                         <h1 class="text-center">Maths Quiz</h1>
-                    </div>
-                    <div class="quizBody rounded m-1 p-2">
-                         <h2 class="text-center">Intstructions</h2>
-                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi quis est id harum nesciunt quia libero odit tempore suscipit deleniti earum aliquid eum, mollitia neque nobis atque ab quae! Nam?</p>
-                    </div>
                     <?php
-                    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                    if($_SERVER['REQUEST_METHOD'] == 'POST'){
                          session_start();
                          $rowNum = 0;
-                         $_SESSION['rownum'] = $rowNum;
+                         $_SESSION['rownum'] = $rowNum;//creating variable row number in session
                          echo $_SESSION['rownum'];
                     }
-                    ?>
-                    <div class="quizButton  rounded m-1 mx-auto">
-                         <form method="post" action="./quizQuestions/mathsQuestions.php">
-                              <button type="submit" class="btn " formmethod="post">START</button>
+                    if (isset($_POST['mathsQuestions'])) {
+                         $Value = 'mathsQuestions';
+                         $_SESSION['dbName'] = 'maths';
+                         $Name = 'Maths';
+
+                    }
+                    else if(isset($_POST['gkQuestions'])){
+                         $Value =  'mathsQuestions';
+                         $_SESSION['dbName'] = 'gk';
+                         $Name = 'General Knowledge';
+                         
+                    }
+                    else if(isset($_POST['wildlifeQuestions'])){
+                         $Value =  'mathsQuestions';
+                         $_SESSION['dbName'] = 'wildlife';
+                         $Name = 'Wild Life';
+                    }
+                    else if(isset($_POST['cricketQuestions'])){
+                         $Value =  'mathsQuestions';
+                         $_SESSION['dbName'] = 'cricket';
+                         $Name = 'Cricket';
+                         
+                    }
+                    echo "
+                    <div class='quizHead rounded m-1'>
+                         <h1 class='text-center'>$Name Quiz</h1>
+                    </div>
+                    <div class='quizBody rounded m-1 p-2'>
+                         <h2 class='text-center'>Intstructions</h2>
+                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi quis est id harum nesciunt quia libero odit tempore suscipit deleniti earum aliquid eum, mollitia neque nobis atque ab quae! Nam?</p>
+                    </div>
+                    <div class='quizButton  rounded m-1 mx-auto'>
+                         <form method='post' action='./quizQuestions/$Value.php'>
+                              <button type='submit' class='btn' name=$Name value=$Name formmethod='post'>START</button>
                          </form>
                     </div>
-
+                    ";
+                    ?>
                </div>
           </div>
           <div class="footer">

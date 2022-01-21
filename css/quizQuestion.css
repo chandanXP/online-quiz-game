@@ -12,6 +12,7 @@
 .quizQuestions{
      border: 2px solid green;
      height: 100%;
+     /* height: 300px; */
 }
 .quizQuit{
      border: 2px solid grey;
